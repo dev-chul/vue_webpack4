@@ -1,8 +1,8 @@
-# fw-workspaces
+# WEBPACK 4.X
 
-앞으로 개인적으로 공부한 프레임워크 설정들이 올라갈 레파지토리입니다.
+WEBPACK 4.X 설정 시 참고하여 수정한 레파짓토리
 
-# vue 4.0으로 업그레이드 시 주의할 점
+# VUE WEBPACK 4.0으로 업그레이드 시 주의할 점
 1. npm global 옵션 충돌
  : global 설치 제거
 
