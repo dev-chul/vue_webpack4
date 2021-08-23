@@ -50,11 +50,11 @@ const devWebpackConfig = merge(baseWebpackConfig, {
     }
   },
   plugins: [
-    new JsDocPlugin({
-      conf: "jsdoc.config.json",
-      cwd: ".",
-      preserveTmpFile: false
-    }),
+    // new JsDocPlugin({
+    //   conf: "jsdoc.config.json",
+    //   cwd: ".",
+    //   preserveTmpFile: false
+    // }),
     new webpack.DefinePlugin({
       'process.env': require('../config/dev.env')
     }),
