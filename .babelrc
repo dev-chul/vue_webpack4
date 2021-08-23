@@ -1,0 +1,11 @@
+{
+  // when add to babel-preset in package.json, modify this area.
+  "presets": [
+    "@babel/preset-react",
+    ["@babel/preset-env"]
+  ],
+  // when add to babel-plugin in package.json, modify this area.
+  "plugins": [
+    "@babel/plugin-transform-runtime",
+  ]
+}

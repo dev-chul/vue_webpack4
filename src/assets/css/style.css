@@ -1,0 +1,12 @@
+.area01 {
+  width: 0px;
+  height: 0px;
+  border-top: 60px solid red;
+  border-right: 60px solid transparent;
+  border-bottom: 60px solid red;
+  border-left: 60px solid red;
+  border-top-left-radius: 60px;
+  border-top-right-radius: 60px;
+  border-bottom-left-radius: 60px;
+  border-bottom-right-radius: 60px;
+}
