@@ -1,6 +1,6 @@
 # WEBPACK 4.X
 
-WEBPACK 4.X 설정 시 참고하여 수정한 레파짓토리
+WEBPACK 4.X 설정 시 참고하여 수정한 REPO
 
 # VUE WEBPACK 4.0으로 업그레이드 시 주의할 점
 1. npm global 옵션 충돌
