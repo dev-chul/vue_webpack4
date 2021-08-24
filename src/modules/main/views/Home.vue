@@ -2,7 +2,12 @@
   <div>
     <h1>{{ msg }}</h1>
     <sample></sample>
+    <router-link to="/worker">Worker</router-link>
+    <br/>
     <router-link to="/transit">TransitionSample</router-link>
+    <br/>
+    <router-link to="/keypad">CustomKeypad</router-link>
+    <br/>
   </div>
 </template>
 

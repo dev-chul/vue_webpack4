@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Layout from '@/modules/main/layout'
+// import Header from '@/modules/main/layout'
+import Header from '@/modules/main/layout/header'
 
 Vue.use(Router)
 
@@ -16,7 +17,7 @@ Router.prototype.push = function push (location, onResolve, onReject) {
 export const defaultRouter = [
   {
     path: '/',
-    component: Layout,
+    component: Header,
     redirect: '/home',
     children: [
       {
@@ -24,49 +25,47 @@ export const defaultRouter = [
         component: () => import('@/modules/main/views/Home'),
         name: 'Home',
         meta: { title: 'Home' }
+      },
+      {
+        path: '/login',
+        name: 'Login',
+        component: () => import('@/modules/main/views/auth/Login'),
+        meta: { title: 'Login' }
+      },
+      {
+        path: '/worker',
+        component: () => import('@/modules/main/views/service/Worker'),
+        name: 'Worker'
+      },
+      {
+        path: '/transit',
+        component: () => import('@/modules/main/views/service/TransitionSample'),
+        name: 'TransitionSample'
+      },
+      {
+        path: '/keypad',
+        component: () => import('@/modules/main/views/service/KeypadUse'),
+        name: 'CustomKeypad'
       }
     ]
-  },
-  {
-    path: '/login',
-    name: 'Login',
-    component: () => import('@/modules/main/views/auth/Login'),
-    meta: { title: 'Login' }
-  },
-  {
-    path: '/worker',
-    component: () => import('@/modules/main/views/service/Worker'),
-    name: 'Worker'
-  },
-  {
-    path: '/transit',
-    component: () => import('@/modules/main/views/service/TransitionSample'),
-    name: 'TransitionSample'
-  },
-  {
-    path: '/keypad',
-    component: () => import('@/modules/main/views/service/KeypadUse'),
-    name: 'CustomKeypad'
   }
 ]
 
 export const roleRouter = [
   {
     path: '/info',
-    component: Layout,
-    redirect: '/info/index',
-    children: [
-      {
-        path: 'index',
-        component: () => import('@/modules/main/views/info/Index'),
-        name: 'Info',
-        meta: { title: 'Info', roles: ['admin'] }
-      }
-    ]
+    // component: Layout,
+    redirect: '/info/index'
+  },
+  {
+    path: 'index',
+    component: () => import('@/modules/main/views/info/Index'),
+    name: 'Info',
+    meta: { title: 'Info', roles: ['admin'] }
   },
   {
     path: '/service',
-    component: Layout,
+    // component: Layout,
     redirect: '/service/index',
     children: [
       {

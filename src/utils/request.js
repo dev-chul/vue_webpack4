@@ -27,8 +27,7 @@ service.interceptors.response.use(
   response => {
     const res = response.data
 
-    if (res.code !== '1000') {
-      console.log('r u init??')
+    if (res.code !== '0000') {
       Message({
         message: res.message || 'Error',
         type: 'error',

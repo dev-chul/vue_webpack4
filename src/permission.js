@@ -8,13 +8,13 @@ import { getToken } from '@/utils/auth'
 
 NProgress.configure({ showSpinner: false })
 
-const whiteList = ['/login', '/', '/main', '/home', '/keypad', '/worker', '/transit'] // no redirect whitelist
+const whiteList = ['/login', '/', '/home'] // no redirect whitelist
 
 console.log('===== permission.js beforeEach start..!')
 router.beforeEach(async (to, from, next) => {
   // start progress bar
   NProgress.start()
-  if ('/' === from.path) {
+  if (from.path === '/') {
     to.meta['close'] = true
   }
 
