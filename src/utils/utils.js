@@ -1,10 +1,10 @@
-import upperFirst from 'lodash/upperFirst'
-import camelCase from 'lodash/camelCase'
+// import upperFirst from 'lodash/upperFirst'
+// import camelCase from 'lodash/camelCase'
 
 export function getComponents (callback) {
   const requireComponent = require.context(
     '@/components',
-    false,
+    true,
     /[a-z]\w+\.(vue|js)$/
   )
 
@@ -14,9 +14,9 @@ export function getComponents (callback) {
     // 개인적으로 소문자를 좋아함
     const componentName = (
       filename
-      .split('/')
-      .pop()
-      .replace(/\.\w+$/, '')
+        .split('/')
+        .pop()
+        .replace(/\.\w+$/, '')
     )
 
     // 추천 룰
@@ -30,6 +30,5 @@ export function getComponents (callback) {
     // )
 
     callback(componentName, componentConfig)
-
   })
 }

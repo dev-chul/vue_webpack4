@@ -8,6 +8,8 @@
     <br/>
     <router-link to="/keypad">CustomKeypad</router-link>
     <br/>
+    <router-link to="/modal">Modal</router-link>
+    <br/>
   </div>
 </template>
 

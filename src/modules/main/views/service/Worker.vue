@@ -12,7 +12,7 @@ export default {
   data: () => ({
     msg: 'Hello'
   }),
-  async mounted() {
+  async mounted () {
     await helloWorld()
   }
 }

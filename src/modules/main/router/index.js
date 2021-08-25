@@ -46,6 +46,11 @@ export const defaultRouter = [
         path: '/keypad',
         component: () => import('@/modules/main/views/service/KeypadUse'),
         name: 'CustomKeypad'
+      },
+      {
+        path: '/modal',
+        component: () => import('@/modules/main/views/service/Modal'),
+        name: 'Modal'
       }
     ]
   }

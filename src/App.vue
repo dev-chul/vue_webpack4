@@ -10,8 +10,13 @@
 
 <script>
 import Vue from 'vue'
+import Vuetify from '@/plugins/vuetify'
+import VModal from 'vue-js-modal'
 
 import { getComponents } from '@/utils/utils'
+
+Vue.use(Vuetify)
+Vue.use(VModal, { dialog: true })
 
 getComponents((componentName, componentConfig) => {
   Vue.component(
