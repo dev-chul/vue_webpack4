@@ -51,6 +51,11 @@ export const defaultRouter = [
         path: '/modal',
         component: () => import('@/modules/main/views/service/Modal'),
         name: 'Modal'
+      },
+      {
+        path: '/customModal',
+        component: () => import('@/modules/main/views/service/CustomModal'),
+        name: 'CustomModal'
       }
     ]
   }

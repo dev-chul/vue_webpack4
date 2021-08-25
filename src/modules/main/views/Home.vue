@@ -10,6 +10,8 @@
     <br/>
     <router-link to="/modal">Modal</router-link>
     <br/>
+    <router-link to="/customModal">CustomModal</router-link>
+    <br/>
   </div>
 </template>
 

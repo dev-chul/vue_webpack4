@@ -5,6 +5,8 @@
     >
       <router-view/>
     </transition>
+    <!-- Custom Alert을 띄우기 위한 Vuetify component -->
+    <v-dialog/>
   </div>
 </template>
 
@@ -29,6 +31,7 @@ export default {
   name: 'App',
   mounted () {
     window.goHistBack = this.goHistBack
+    Vue.prototype.$customConfirm = this.customConfirm
   },
   methods: {
     goHistBack () {
@@ -37,6 +40,35 @@ export default {
       } else {
         history.back()
       }
+    },
+    customConfirm () {
+      console.log('App.vue customConfirm ()')
+      this.$modal.show('dialog', {
+        title: 'The standard Lorem Ipsum passage',
+        text:
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+        buttons: [
+          {
+            title: 'Cancel',
+            handler: () => {
+              this.$modal.hide('dialog')
+            }
+          },
+          {
+            title: 'Like',
+            default: true,
+            handler: () => {
+              alert('Like action')
+            }
+          },
+          {
+            title: 'Repost',
+            handler: () => {
+              alert('Repost action')
+            }
+          }
+        ]
+      })
     }
   }
 }
