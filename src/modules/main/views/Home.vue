@@ -14,12 +14,6 @@
     <br/>
     <router-link to="/sharedElement">SharedElement</router-link>
     <br/>
-    <img
-      src="/static/cute_dog.jpg"
-      width="220px"
-      v-shared-element:community-img="{
-      }"
-    />
   </div>
 </template>
 
