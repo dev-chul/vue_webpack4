@@ -56,6 +56,16 @@ export const defaultRouter = [
         path: '/customModal',
         component: () => import('@/modules/main/views/service/CustomModal'),
         name: 'CustomModal'
+      },
+      {
+        path: '/sharedElement',
+        component: () => import('@/modules/main/views/service/SharedElement'),
+        name: 'SharedElement'
+      },
+      {
+        path: '/sharedElementDetail',
+        component: () => import('@/modules/main/views/service/SharedElementDetail'),
+        name: 'SharedElementDetail'
       }
     ]
   }

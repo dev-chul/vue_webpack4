@@ -12,6 +12,8 @@ import '@/permission'
 
 import '@/assets/css/style.css'
 
+import { SharedElementDirective } from 'v-shared-element'
+
 Vue.config.productionTip = false
 
 let vue = new Vue({
@@ -23,3 +25,4 @@ let vue = new Vue({
   // template: '<App/>'
 })
 Vue.use(vue)
+Vue.use(SharedElementDirective)

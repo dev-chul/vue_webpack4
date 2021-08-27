@@ -17,29 +17,29 @@
 </template>
 
 <script>
-  import Keypad from './KeypadComponent'
+import Keypad from './KeypadComponent'
 
-  export default {
-    components: {
-      Keypad
-    },
-    mounted () {
+export default {
+  components: {
+    Keypad
+  },
+  mounted () {
 
-    },
-    data() {
-      return {
-        price: 1,
-        amount: 0,
-        number: 3,
-        xo: 0
-      }
-    },
-    methods: {
-      clickEvent () {
-        alert(1)
-      }
+  },
+  data () {
+    return {
+      price: 1,
+      amount: 0,
+      number: 3,
+      xo: 0
+    }
+  },
+  methods: {
+    clickEvent () {
+      alert(1)
     }
   }
+}
 </script>
 
 <style>

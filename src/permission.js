@@ -6,11 +6,14 @@ import NProgress from 'nprogress'
 import 'nprogress/nprogress.css'
 import { getToken } from '@/utils/auth'
 
+import { SharedElementRouteGuard } from 'v-shared-element'
+
 NProgress.configure({ showSpinner: false })
 
 const whiteList = ['/login', '/', '/home'] // no redirect whitelist
 
 console.log('===== permission.js beforeEach start..!')
+router.beforeEach(SharedElementRouteGuard)
 router.beforeEach(async (to, from, next) => {
   // start progress bar
   NProgress.start()
