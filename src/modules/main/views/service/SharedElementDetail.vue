@@ -1,14 +1,16 @@
 <template>
   <div>
-    <h1>{{ msg }}</h1>
     <router-link to="/sharedElement">
       <img
-        src="/static/cute_dog.jpg"
-        width="220px"
-        v-shared-element:community-img="{
+        :src="$route.query.img"
+        width="100%"
+        v-shared-element:[`community-${$route.query.id}`]="{
         }"
       />
     </router-link>
+    <div style="margin: 10px; text-align: justify; font-size: 13px;">
+      {{content}}
+    </div>
   </div>
 </template>
 
@@ -17,10 +19,29 @@ export default {
   name: 'SharedElement',
   data () {
     return {
-      msg: 'SharedElement'
+      msg: 'SharedElement',
+      content: ''
     }
   },
+  async mounted () {
+    await this.getGameList()
+  },
   methods: {
+    getGameList () {
+      fetch('http://127.0.0.1:8080/static/data/game-list.json')
+        .then((response) => {
+          if (response.ok) {
+            return response.json()
+          }
+        })
+        .then((json) => {
+          let index = Number(this.$route.query.id) - 1
+          this.content = json[index].content
+        })
+        .catch((error) => {
+          console.log(error)
+        })
+    }
   }
 }
 </script>

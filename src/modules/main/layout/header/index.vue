@@ -3,7 +3,7 @@
     <h3
       style="text-align-last: left; margin: 15px;"
       @click="goHome"
-    >Home</h3>
+    >Back</h3>
     <div>
        <router-view/>
     </div>
@@ -15,7 +15,11 @@ export default {
   name: 'Header',
   methods: {
     goHome () {
-      this.$router.push('/home')
+      if (window.history.length === 1) {
+        this.$router.push('/home')
+      } else {
+        window.history.back()
+      }
     }
   }
 }

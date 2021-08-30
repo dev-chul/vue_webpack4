@@ -1,0 +1,26 @@
+[
+  {
+    "id": "01",
+    "title": "God Of War",
+    "img1": "/static/god_of_war.png",
+    "content": "God of War[a] is an action-adventure game developed by Santa Monica Studio and published by Sony Interactive Entertainment (SIE). Released worldwide on April 20, 2018, for the PlayStation 4 (PS4), it is the eighth installment in the God of War series, the eighth chronologically, and the sequel to 2010's God of War III. Unlike previous games, which were loosely based on Greek mythology, this installment is loosely inspired by Norse mythology, with the majority of it set in ancient Scandinavia in the realm of Midgard. For the first time in the series, there are two protagonists: Kratos, the former Greek God of War who remains the only playable character, and his young son Atreus. Following the death of Kratos' second wife and Atreus' mother, they journey to fulfill her request that her ashes be spread at the highest peak of the nine realms. Kratos keeps his troubled past a secret from Atreus, who is unaware of his divine nature. Along their journey, they encounter monsters and gods of the Norse world."
+  },
+  {
+    "id": "02",
+    "title": "Scarlet Nexus",
+    "img1": "/static/scarlet_nexus.png",
+    "content": "Scarlet Nexus is an action role-playing game developed by Bandai Namco Studios and Tose and published by Bandai Namco Entertainment. It was released on June 25, 2021, for Windows, PlayStation 4, PlayStation 5, Xbox One and Xbox Series X and Series S. The game received generally positive reviews from critics, with praise for the combat but criticism for its side missions."
+  },
+  {
+    "id": "03",
+    "title": "The Division 2",
+    "img1": "/static/division2.png",
+    "content": "Tom Clancy's The Division 2 is an online action role-playing video game developed by Massive Entertainment and published by Ubisoft. The sequel to Tom Clancy's The Division (2016), it is set in a near-future Washington, D.C. in the aftermath of a genetically engineered virus known as 'Green Poison' being released, and follows an agent of the Strategic Homeland Division as they try to rebuild the city. The game was released for Microsoft Windows, PlayStation 4, and Xbox One on March 15, 2019."
+  },
+  {
+    "id": "04",
+    "title": "Red Dead Redemption 2",
+    "img1": "/static/red_dead_redemption_2.png",
+    "content": "Red Dead Redemption 2[a] is a 2018 action-adventure game developed and published by Rockstar Games. The game is the third entry in the Red Dead series and is a prequel to the 2010 game Red Dead Redemption. The story is set in 1899 in a fictionalized representation of the Western, Midwestern, and Southern United States and follows outlaw Arthur Morgan, a member of the Van der Linde gang. Arthur must deal with the decline of the Wild West whilst attempting to survive against government forces, rival gangs, and other adversaries. The story also follows fellow gang member John Marston, the protagonist of Red Dead Redemption."
+  }
+]
