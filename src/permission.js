@@ -2,13 +2,13 @@ import router from './router'
 import store from '@/modules/main/store'
 import user from '@/modules/main/store/modules/user'
 // import { Message } from 'element-ui'
-import NProgress from 'nprogress'
-import 'nprogress/nprogress.css'
+// import NProgress from 'nprogress'
+// import 'nprogress/nprogress.css'
 import { getToken } from '@/utils/auth'
 
 import { SharedElementRouteGuard } from 'v-shared-element'
 
-NProgress.configure({ showSpinner: false })
+// NProgress.configure({ showSpinner: false })
 
 const whiteList = ['/login', '/', '/home'] // no redirect whitelist
 
@@ -16,7 +16,7 @@ console.log('===== permission.js beforeEach start..!')
 router.beforeEach(SharedElementRouteGuard)
 router.beforeEach(async (to, from, next) => {
   // start progress bar
-  NProgress.start()
+  // NProgress.start()
   if (from.path === '/') {
     to.meta['close'] = true
   }
@@ -26,7 +26,7 @@ router.beforeEach(async (to, from, next) => {
   if (hasToken) {
     if (to.path === '/login') {
       next({ path: '/' })
-      NProgress.done()
+      // NProgress.done()
     } else {
       const hasRoles = user.state.roles && user.state.roles.length > 0
       if (hasRoles) {
@@ -41,7 +41,7 @@ router.beforeEach(async (to, from, next) => {
           // await store.dispatch('user/resetToken')
           // Message.error(error || 'Has Error')
           // next(`/login?redirect=${to.path}`)
-          NProgress.done()
+          // NProgress.done()
         }
       }
     }
@@ -49,7 +49,7 @@ router.beforeEach(async (to, from, next) => {
     if (whiteList.indexOf(to.path) !== -1) {
       next()
     } else {
-      NProgress.done()
+      // NProgress.done()
       next('/login')
       // location.href = '/main#/login'
     }
@@ -58,5 +58,5 @@ router.beforeEach(async (to, from, next) => {
 console.log('===== permission.js beforeEach end..!')
 
 router.afterEach(() => {
-  NProgress.done()
+  // NProgress.done()
 })
