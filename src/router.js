@@ -27,7 +27,16 @@ Router.prototype.push = function push (location, onResolve, onReject) {
 }
 
 const router = new Router({
-  routes: list
+  routes: list,
+  scrollBehavior (to, from, savedPosition) {
+    if (savedPosition != null) {
+      console.log('scrollBehavior : ' + savedPosition.y)
+      console.log(history.state)
+      var state = history.state
+      state['y'] = savedPosition.y
+      history.pushState(state, null, null)
+    }
+  }
 })
 
 export default router

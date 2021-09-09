@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Layout from '@/modules/ntry/layout'
+import Header from '@/modules/main/layout/header'
 
 Vue.use(Router)
 
@@ -15,11 +15,10 @@ Router.prototype.push = function push (location, onResolve, onReject) {
 
 export const defaultRouter = [
   {
-    path: '/main',
-    component: Layout,
-    component: () => import('@/modules/ntry/views/Main'),
-    name: 'Main',
-    meta: { title: 'Main' }
+    path: '/ntry',
+    component: Header,
+    name: 'Ntry',
+    meta: { title: 'Ntry' }
   }
 ]
 

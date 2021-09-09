@@ -28,6 +28,7 @@ export default {
   },
   methods: {
     getGameList () {
+      // fetch('http://127.0.0.1:8080/static/data/game-list.json')
       fetch('http://146.56.174.154:8090/static/data/game-list.json')
         .then((response) => {
           if (response.ok) {
