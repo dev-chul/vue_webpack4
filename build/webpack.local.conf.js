@@ -56,7 +56,7 @@ const devWebpackConfig = merge(baseWebpackConfig, {
     //   preserveTmpFile: false
     // }),
     new webpack.DefinePlugin({
-      'process.env': require('../config/dev.env')
+      'process.env': require('../config/local.env')
     }),
     new webpack.HotModuleReplacementPlugin(),
     new webpack.HashedModuleIdsPlugin(),

@@ -49,7 +49,7 @@ module.exports = {
     productionGzip: false,
     productionGzipExtensions: ['js', 'css'],
 
-    bundleAnalyzerReport: true
+    bundleAnalyzerReport: false
   },
 
   build: {
