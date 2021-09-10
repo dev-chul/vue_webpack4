@@ -16,10 +16,9 @@
 
 <script>
 export default {
-  name: 'SharedElement',
+  name: 'SharedElementDetail',
   data () {
     return {
-      msg: 'SharedElement',
       content: ''
     }
   },

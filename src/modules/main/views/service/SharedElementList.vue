@@ -20,7 +20,6 @@ export default {
   name: 'SharedElementList',
   data () {
     return {
-      msg: 'Game List',
       gameList: null
     }
   },
