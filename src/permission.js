@@ -12,7 +12,6 @@ import { SharedElementRouteGuard } from 'v-shared-element'
 
 const whiteList = ['/login', '/', '/home'] // no redirect whitelist
 
-console.log('===== permission.js beforeEach start..!')
 router.beforeEach(SharedElementRouteGuard)
 router.beforeEach(async (to, from, next) => {
   // start progress bar
@@ -55,7 +54,6 @@ router.beforeEach(async (to, from, next) => {
     }
   }
 })
-console.log('===== permission.js beforeEach end..!')
 
 router.afterEach(() => {
   // NProgress.done()

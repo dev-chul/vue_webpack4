@@ -42,7 +42,6 @@ export default {
       }
     },
     customConfirm () {
-      console.log('App.vue customConfirm ()')
       this.$modal.show('dialog', {
         title: 'The standard Lorem Ipsum passage',
         text:

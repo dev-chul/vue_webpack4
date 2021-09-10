@@ -61,8 +61,6 @@ const actions = {
   getInfo ({ commit, state }) {
     return new Promise((resolve, reject) => {
       getInfo(state.token).then(response => {
-        console.log('getInfo start...')
-
         if (!response.roles || response.roles.length <= 0) {
           // reject('getInfo: roles must be a non-null array!')
         }
@@ -72,7 +70,6 @@ const actions = {
         commit('SET_AVATAR', response.email)
         // commit('SET_INTRODUCTION', introduction)
         resolve(response)
-        console.log('getInfo complete...')
       }).catch(error => {
         reject(error)
       })
